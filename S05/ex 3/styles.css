@@ -1,0 +1,39 @@
+/* Crie um arquivo CSS chamado styles.css e adicione um estilo básico para o cabeçalho, o conteúdo principal e o rodapé */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+header{
+    top: 0;
+    background-color: rgb(105, 105, 158);
+    height: 40px;
+    width: 100vw;
+}
+
+#navHeader{
+    /* mejorar o otra forma centrar padding */
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main{
+    margin-top: 20px;
+}
+
+.navLink{
+    color:white;
+    text-decoration: none;
+}
+
+footer{
+    width: 100vw;
+    height: 40px;
+    bottom: 0;
+    background-color: rgb(147, 166, 177);
+    /* color: white; */
+    position: fixed;
+}
