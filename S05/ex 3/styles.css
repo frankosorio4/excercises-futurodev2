@@ -1,4 +1,12 @@
-/* Crie um arquivo CSS chamado styles.css e adicione um estilo básico para o cabeçalho, o conteúdo principal e o rodapé */
+/* No arquivo HTML, adicione elementos para representar as informações do perfil do usuário, como nome, foto, descrição, etc. */
+
+/* https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500 
+8ECAE6  142, 202, 230
+219EBC  33, 158, 188
+023047  2, 48, 71
+FFB703  255, 183, 3
+FB8500  251, 133, 0
+*/
 
 * {
     margin: 0;
@@ -6,8 +14,9 @@
   }
 
 header{
+    position: absolute;
     top: 0;
-    background-color: rgb(105, 105, 158);
+    background-color: rgb(2, 48, 71);
     height: 40px;
     width: 100vw;
 }
@@ -21,19 +30,34 @@ header{
 }
 
 main{
-    margin-top: 20px;
+    position: relative;
+    margin-top: 40px;
 }
 
 .navLink{
-    color:white;
+    color:rgb(251, 133, 0);
+    /* color:white; */
     text-decoration: none;
+}
+
+#divTitulo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(33, 158, 188);
+}
+
+.divInfo{
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 footer{
     width: 100vw;
     height: 40px;
     bottom: 0;
-    background-color: rgb(147, 166, 177);
+    background-color: rgb(142, 202, 230);
     /* color: white; */
     position: fixed;
 }
