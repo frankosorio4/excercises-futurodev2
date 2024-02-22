@@ -1,0 +1,85 @@
+/* No arquivo HTML, adicione elementos para representar as informações do perfil do usuário, como nome, foto, descrição, etc. */
+
+/* https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500 
+8ECAE6  142, 202, 230
+219EBC  33, 158, 188
+023047  2, 48, 71
+FFB703  255, 183, 3
+FB8500  251, 133, 0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+header{
+    position: absolute;
+    top: 0;
+    background-color: rgb(2, 48, 71);
+    height: 40px;
+    width: 100vw;
+    font-weight: 550;
+}
+
+#navHeader{
+    /* mejorar o otra forma centrar padding */
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main{
+    position: relative;
+    margin-top: 40px;
+}
+
+#divTitulo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(33, 158, 188);
+}
+
+#perfilPhoto{
+    height: 150px;
+    border-radius: 100%;
+}
+
+.navLink{
+    color:rgb(251, 133, 0);
+    /* color:white; */
+    text-decoration: none;
+}
+
+.divInfo{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+ol li{
+    margin: 25px auto;
+}
+
+#listEdu{
+    margin-left: 30px;
+}
+
+footer{
+    padding: 5px;
+    width: 100vw;
+    height: 130px;
+    bottom: 0;
+    background-color: rgb(142, 202, 230);
+}
+
+footer p{
+    margin: 5px 10px;
+}
+
+a{
+    text-decoration: none;
+}
