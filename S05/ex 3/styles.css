@@ -11,6 +11,7 @@ FB8500  251, 133, 0
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
   }
 
 header{
@@ -19,6 +20,7 @@ header{
     background-color: rgb(2, 48, 71);
     height: 40px;
     width: 100vw;
+    font-weight: 550;
 }
 
 #navHeader{
@@ -27,6 +29,19 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+#divTitulo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(33, 158, 188);
+}
+
+#perfilPhoto{
+    height: 150px;
+    border-radius: 100%;
 }
 
 main{
@@ -40,24 +55,34 @@ main{
     text-decoration: none;
 }
 
-#divTitulo{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    align-items: center;
-    background-color: rgb(33, 158, 188);
-}
 
 .divInfo{
     margin-top: 10px;
     margin-left: 20px;
 }
 
+ol li{
+    margin: 25px auto;
+}
+
+#listEdu{
+    margin-left: 30px;
+}
+
 footer{
+    padding: 5px;
     width: 100vw;
-    height: 40px;
+    height: 130px;
     bottom: 0;
     background-color: rgb(142, 202, 230);
     /* color: white; */
-    position: fixed;
+    /* position: fixed; */
+}
+
+footer p{
+    margin: 5px 10px;
+}
+
+a{
+    text-decoration: none;
 }
