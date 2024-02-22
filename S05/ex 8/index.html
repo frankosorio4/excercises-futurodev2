@@ -1,0 +1,74 @@
+<!-- No arquivo JavaScript, selecione elementos HTML (por exemplo, o elemento que contém o nome do usuário) e atualize seu conteúdo dinamicamente usando o JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>FMT</title>
+</head>
+
+<body>
+    <!-- <body onload="boasVindas()"> -->
+    <header>
+        <nav id="navHeader">
+            <a class="navLink" href="">Home</a>
+            <a class="navLink" href="">About</a>
+            <a class="navLink" href="">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="divTitulo">
+            <h1 id="nomePerfil">Currículo</h1>
+            <img id="perfilPhoto" src="assets/foto.jpeg" alt="Foto">
+        </div>
+
+        <div class="divInfo">
+            <h2>Informações Básicas</h2>
+            <button>Modificar</button>
+            <div class="divInfo">
+                <ol class="list">
+                    <li id="liNome">Nome: Frank David Osorio Colmenares</li>
+                    <li id="liIdade">Idade: 37 anos</li>
+                    <li id="liNacionalidade">Nacionalidade: Venezuelano</li>
+                    <li id="liProfissao">Profissão: Criador de conteúdo matemático </li>
+                    <li>Educaçao:
+                        <ul id="listEdu">
+                            <li>Tecnico medio en maquinas-Herramientas - 2003-2005. Merida-Venezuela.</li>
+                            <li>Licenciado en Física. Universidad de los Andes - 2006-2015. Merida-Venezuela. </li>
+                            <li>Analista de Desenvolvimeto Web (Em andamento).</li>
+                        </ul>
+                    </li>
+                    <li>Contato: frankosorio4@gmail.com</li>
+                </ol>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>Autor: Frank Osorio.</p>
+        <nav>
+            <p>
+                <box-icon name='envelope' flip='horizontal' ></box-icon>
+                <a href="frankosorio4@gmail.com">frankosorio4@gmail.com</a></p>
+            <p>
+                <box-icon name='linkedin-square' type='logo' ></box-icon>
+                <a target="_blank" href="www.linkedin.com/in/frank-david-osorio">LinkedIn</a>
+            </p>
+            <p>
+                <box-icon name='github' type='logo' ></box-icon>
+                <a target="_blank" href="https://github.com/frankosorio4">GitHub</a>
+            </p>
+        </nav>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
