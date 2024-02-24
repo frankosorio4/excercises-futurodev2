@@ -6,16 +6,24 @@ let inputNome = document.getElementById('inputNome');
 let idade = document.getElementById('liIdade');
 let inputIdade = document.getElementById('inputIdade');
 let nacionalidade = document.getElementById('liNacionalidade');
+let inputNacionalidade = document.getElementById('inputNacionalidade');
 let profissao = document.getElementById('liProfissao');
 
 function mudarNome(){
-    nome.innerText = 'Nome: ' + inputNome.value;
-    nome.style.background = 'lightgreen'
+    if (inputNome.value != ''){
+        nome.innerText = 'Nome: ' + inputNome.value;
+        nome.style.background = 'lightgreen';
+    }
 }
 
 function mudarIdade(){
     idade.innerText = 'Idade: ' + inputIdade.value + ' anos';
     idade.style.background = 'lightgreen'
+}
+
+function mudarNacionalidade(){
+    nacionalidade.innerText = 'Nacionalidade: ' + inputNacionalidade.value;
+    nacionalidade.style.background = 'lightgreen'
 }
 
 // function boasVindas(){
