@@ -8,6 +8,7 @@ let inputIdade = document.getElementById('inputIdade');
 let nacionalidade = document.getElementById('liNacionalidade');
 let inputNacionalidade = document.getElementById('inputNacionalidade');
 let profissao = document.getElementById('liProfissao');
+let inputProfissao = document.getElementById('inputProfissao');
 
 function mudarNome(){
     if (inputNome.value != ''){
@@ -24,6 +25,11 @@ function mudarIdade(){
 function mudarNacionalidade(){
     nacionalidade.innerText = 'Nacionalidade: ' + inputNacionalidade.value;
     nacionalidade.style.background = 'lightgreen'
+}
+
+function mudarProfissao(){
+    profissao.innerText = 'Profissao: ' + inputProfissao.value;
+    profissao.style.background = 'lightgreen'
 }
 
 // function boasVindas(){
