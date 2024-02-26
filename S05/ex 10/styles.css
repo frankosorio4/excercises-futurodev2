@@ -8,6 +8,12 @@ FFB703  255, 183, 3
 FB8500  251, 133, 0
 */
 
+:root{
+    --orange:#fca311;
+    --blue: #14213d;
+    --white: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,12 +60,14 @@ main {
     width: 100vw;
     align-items: center;
     background-image: url('assets/science-mathematics-abstract-background-science-mathematics-abstract-.webp');
-    height: 50vh;
+    background-position: center;
+    /* background-size: cover; */
+    height: 60vh;
     /* background-color: rgb(33, 158, 188); */
 }
 
 #perfilPhoto {
-    height: 150px;
+    height: 250px;
     border-radius: 100%;
 }
 
@@ -99,10 +107,10 @@ ol li {
 
 .descricao {
     display: none;
-    background-color: rgb(165, 202, 219);
-    border-radius: 10px;
+    /* background-color: rgb(165, 202, 219); */
+    /* border-radius: 10px; */
     padding: 5px;
-    border: solid 1px gray;
+    /* border: solid 1px gray; */
 }
 
 footer {
@@ -113,19 +121,24 @@ footer {
     font-size: 16px;
 }
 
-#footerContato{
+#footerOthers {
     padding: 10px;
     display: flex;
     justify-content: space-around;
+    /* height: 200px; */
 }
 
 #arrowHome {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: rgb(251, 133, 0);
-    z-index: 100;
+    height: 48px;
     font-size: 3em;
+    color: var(--orange);
+    position: fixed;
+    z-index: 100;
+    right: 20px;
+    bottom: 50px;
+    background-color: var(--white);
+    border-radius: 50%;
+    scroll-behavior: smooth;
 }
 
 p {
@@ -134,4 +147,13 @@ p {
 
 a {
     text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer p a{
+    align-items: center;
 }
