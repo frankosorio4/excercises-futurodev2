@@ -8,8 +8,8 @@ FFB703  255, 183, 3
 FB8500  251, 133, 0
 */
 
-:root{
-    --orange:#fca311;
+:root {
+    --orange: #fca311;
     --blue: #14213d;
     --white: #ffffff;
 }
@@ -22,9 +22,12 @@ FB8500  251, 133, 0
 
 #top {
     position: absolute;
-    top: 0; /* Place it at the top of the page */
-    left: 0; /* Align it to the left */
-    width: 100%;/* Make it cover the full width */
+    top: 0;
+    /* Place it at the top of the page */
+    left: 0;
+    /* Align it to the left */
+    width: 100%;
+    /* Make it cover the full width */
     height: 0;
 }
 
@@ -45,6 +48,41 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+/* #nome {
+    animation: typing 1.5s steps(14, end) forwards;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 30%;}
+}  */
+
+
+/* --------ANIMATIO APPERING-------------- */
+@keyframes animate {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+#nome{
+    overflow: hidden; 
+    animation: animate 1.5s linear forwards;
+}
+
+#nome2{
+    overflow: hidden; 
+    animation: animate 2.5s linear forwards;
+}
+
+/* --------ANIMATIO APPERING-------------- */
 
 main {
     position: relative;
@@ -86,7 +124,7 @@ ol li {
     margin: 25px auto;
 }
 
-.secondList{
+.secondList {
     margin-left: 30px;
 }
 
@@ -154,6 +192,16 @@ footer a {
     font-weight: 600;
 }
 
-footer p a{
+footer p a {
     align-items: center;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
