@@ -1,0 +1,186 @@
+<!-- Adicione mais estilos, melhore a experiência do usuário com animações simples, adicione validações com JavaScript, etc. -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Currículo</title>
+</head>
+
+<body>
+    <!-- <body onload="boasVindas()"> -->
+    <div id="top"></div>
+    <a href="#top" id="arrowHome">
+        <i class='bx bx-up-arrow-circle'></i>
+    </a>
+
+    <header>
+        <nav id="navHeader">
+            <a class="navLink" href="#top">Home</a>
+            <a class="navLink" href="">About</a>
+            <a class="navLink" href="#footerContato">Contact</a>
+        </nav>
+    </header>
+
+    <div id="divTitulo">
+        <div>
+            <h1>Frank Osorio</h1><br>
+            <h2>Storekeeper, mechanic technician, content developer</h2>
+        </div>
+        <img id="perfilPhoto" src="assets/foto.jpeg" alt="Foto">
+    </div>
+
+    <main>
+
+        <div class="divInfo">
+            <h2 style="text-align: center;">Informações Básicas</h2>
+            <div class="divInfo">
+                <ol class="list">
+                    <li>
+                        <div id="liIdade">
+                            <b>Idade: </b>37 anos
+                        </div>
+                        <div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="liNacionalidade">
+                            <b>Nacionalidade: </b>Venezuelano
+                        </div>
+                        <div>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                        <div id="liProfissao">
+                            <b>Profissão: </b>Criador de conteúdo matemático
+                        </div>
+                        <button class="btn" onclick="mostrarDiv('descricaoJob')">Descriçao</button>
+                        <div id="descricaoJob" class="descricao">
+                            This job is related to creating and developing engaging and educational content related to
+                            mathematics. They are essential in translating complex mathematical concepts into easily
+                            understandable and accessible materials for a variety of audiences. In this job, I use the
+                            software Latex to appropriately write and display all the mathematical content.
+                        </div>
+                    </li>
+                    <li>
+                        <b>Educação: </b>
+                        <ul class="secondList">
+                            <li>
+                                <div>
+                                    Tecnico medio en maquinas-Herramientas - 2003-2005. Merida-Venezuela.
+                                </div>
+                                <button class="btn" onclick="mostrarDiv('descricaoTec')">Descriçao</button>
+                                <div id="descricaoTec" class="descricao">
+                                    Curso técnico que ensina como se desenvolvem processos de manufatura que implicam
+                                    esmerilhação, mandrilagem, perfuração, solda TIG e torneamento em metais como
+                                    alumínio, aço inoxidável, titânio e outros. O curso aborda também técnicas básicas
+                                    de Gestão de almoxarifado.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Licenciado en Física. Universidad de los Andes - 2006-2015. Merida-Venezuela.
+                                </div>
+                                <button class="btn" onclick="mostrarDiv('descricaoUni')">Descriçao</button>
+                                <div id="descricaoUni" class="descricao">
+                                    Para comprender los fenómenos que rodean a nuestro mundo es necesario estudiarlos
+                                    con un enfoque objetivo. En este sentido las ciencias básicas nos permiten entender
+                                    estos fenómenos y aprovechar este conocimiento en nuestra vida diaria. La Física es
+                                    una ciencia experimental que permite crear modelos de una gran variedad de fenómenos
+                                    mediante principios físicos fundamentales. Este conocimiento ha permitido el rápido
+                                    avance de muchas ciencias aplicadas. Al estudiar esta carrera pude adquirir
+                                    habilidades para analizar diferentes tipos de situaciones usando el método
+                                    científico y a aplicar este conocimiento a la resolución de problemas cotidianos. Ya
+                                    al final de mi carrera profundice un poco acerca de La Física del estado sólido y
+                                    semiconductores. Esta área tiene gran importancia en la tecnología actual.
+                                </div>
+
+                            </li>
+                            <li>Analista de Desenvolvimento Web (Em andamento).</li>
+                        </ul>
+                    </li>
+                    <li><b>Experiencia: </b>
+                        <ul class="secondList">
+                            <li>
+                                <div>
+                                    Operador de torno mecânico, pessoal de almoxarifado.Citec-Ula · Jornada completa. Citec-Ula. jun. 2005 - oct. 2018
+                                </div>
+                                <button class="btn" onclick="mostrarDiv('descricaoCitec')">Descriçao</button>
+                                <div id="descricaoCitec" class="descricao">
+                                    Empresa dedicada à manufactura de peças médicas com aplicação no campo de
+                                    traumatologia. Em Citec se desenvolvem processos de manufatura que implicam
+                                    esmerilhação, mandrilagem, perfuração, solda TIG e torneamento em metais como
+                                    alumínio, aço inoxidável, titânio e outros. Em esta empresa eu trabalhei em gestão
+                                    almoxarifado, controle e compra de matéria prima. Também fiz manutenção preventiva e
+                                    corretiva de máquinas metalomecânicas.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Ajudante de professor.
+                                    Universidad de los Andes (VE).sept. 2007 - jul. 2014
+                                </div>
+                                <button class="btn" onclick="mostrarDiv('descricaoPreparador')">Descriçao</button>
+                                <div id="descricaoPreparador" class="descricao">
+                                    O trabalho consiste em apoiar o professor no ensino dos conceitos de temas de
+                                    cálculo de uma variável. Alguns tópicos são: inequações, funções, gráfico de
+                                    funções, limites, derivação de uma função, integrais, curvas paramétricas e
+                                    coordenadas polares. Neste trabalho eu pude adquirir habilidades que tem relação com
+                                    docência.
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><b>Contato: </b>
+                        <ul class="secondList">
+                            <li>
+                                <box-icon name='envelope' flip='horizontal'></box-icon>
+                                <a href="frankosorio4@gmail.com">Frankosorio4@gmail.com</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><b>Sites de interesse: </b>
+                        <ul class="secondList">
+                            <li>Facultad de ciencias-Ula, Venezuela. <a href="http://www.ula.ve/ciencias/" target="_blank">Ula.ve-ciencias</a></li>
+                            <li>Site gratuito de cursos de Matematica e Fisica. <a href="https://www.khanacademy.org/" target="_blank">KhanAcademy</a>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav id="footerContato">
+            <!-- <p>
+                <box-icon name='envelope' flip='horizontal'></box-icon>
+                <a href="frankosorio4@gmail.com">Email</a>
+            </p> -->
+            <p>Autor: Frank Osorio.</p>
+            <p>
+                <box-icon name='linkedin-square' type='logo'></box-icon>
+                <a target="_blank" href="www.linkedin.com/in/frank-david-osorio">LinkedIn</a>
+            </p>
+            <p>
+                <box-icon name='github' type='logo'></box-icon>
+                <a target="_blank" href="https://github.com/frankosorio4">GitHub</a>
+            </p>
+        </nav>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- images
+https://www.shutterstock.com/discover/free-stock-photo?PPC_GOO_BR_IG-691591786472&cr=c&ds_ag=FF%3DDSA+-+All+Pages_AU%3DVisitors&ds_agid=58700006048355294&ds_cid=71700000068402499&ds_eid=700000001483689&gad_source=1&gclid=Cj0KCQiA5-uuBhDzARIsAAa21T-JWC_4cYfIKvX78J_hYkUQh94MJ2ShjWBVUQwhlFo4kSIAOdsFfT0aAn8rEALw_wcB&gclsrc=aw.ds&kw=&psafe_param=1&utm_campaign=CO%3DBR_LG%3DEN_BU%3DIMG_AD%3DDSA_TS%3Dlggeneric_RG%3DAMER_AB%3DACQ_CH%3DSEM_OG%3DCONV_PB%3DGoogle&utm_medium=cpc&utm_source=GOOGLE -->

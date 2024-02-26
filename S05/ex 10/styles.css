@@ -1,0 +1,137 @@
+/* Adicione mais estilos, melhore a experiência do usuário com animações simples, adicione validações com JavaScript, etc. */
+
+/* https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500 
+8ECAE6  142, 202, 230
+219EBC  33, 158, 188
+023047  2, 48, 71
+FFB703  255, 183, 3
+FB8500  251, 133, 0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#top {
+    position: absolute;
+    top: 0; /* Place it at the top of the page */
+    left: 0; /* Align it to the left */
+    width: 100%;/* Make it cover the full width */
+    height: 0;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color: rgb(2, 48, 71);
+    height: 40px;
+    width: 100vw;
+    font-weight: 550;
+}
+
+#navHeader {
+    /* mejorar o otra forma centrar padding */
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main {
+    position: relative;
+    margin-top: 40px;
+    left: 10vw;
+    width: 80vw;
+}
+
+#divTitulo {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    background-image: url('assets/science-mathematics-abstract-background-science-mathematics-abstract-.webp');
+    height: 50vh;
+    /* background-color: rgb(33, 158, 188); */
+}
+
+#perfilPhoto {
+    height: 150px;
+    border-radius: 100%;
+}
+
+.navLink {
+    color: rgb(251, 133, 0);
+    /* color:white; */
+    text-decoration: none;
+}
+
+.divInfo {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+ol li {
+    margin: 25px auto;
+}
+
+.secondList{
+    margin-left: 30px;
+}
+
+.btn {
+    background-color: rgb(205, 220, 226);
+    border-radius: 10px;
+    border: solid 1px rgb(122, 147, 153);
+    padding: 6px;
+    margin: 3px;
+    font-size: medium;
+    /* height: 30px; */
+}
+
+.divInfo div {
+    margin: 5px 5px;
+    /* display: inline-block; */
+}
+
+.descricao {
+    display: none;
+    background-color: rgb(165, 202, 219);
+    border-radius: 10px;
+    padding: 5px;
+    border: solid 1px gray;
+}
+
+footer {
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+    background-color: rgb(142, 202, 230);
+    font-size: 16px;
+}
+
+#footerContato{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#arrowHome {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: rgb(251, 133, 0);
+    z-index: 100;
+    font-size: 3em;
+}
+
+p {
+    margin: 5px 5px;
+}
+
+a {
+    text-decoration: none;
+}
