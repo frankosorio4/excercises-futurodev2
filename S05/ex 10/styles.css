@@ -28,7 +28,7 @@ FB8500  251, 133, 0
     /* Align it to the left */
     width: 100%;
     /* Make it cover the full width */
-    height: 0;
+    height: 40;
 }
 
 header {
@@ -84,6 +84,20 @@ header {
 
 /* --------ANIMATIO APPERING-------------- */
 
+#divTitulo {
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 60vh;
+    align-items: center;
+    background-image: url('assets/science-mathematics-abstract-background-science-mathematics-abstract-.webp');
+    background-position: center;
+    /* background-size: cover; */
+    /* background-color: rgb(33, 158, 188); */
+}
+
 main {
     position: relative;
     margin-top: 40px;
@@ -91,19 +105,7 @@ main {
     width: 80vw;
 }
 
-#divTitulo {
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    align-items: center;
-    background-image: url('assets/science-mathematics-abstract-background-science-mathematics-abstract-.webp');
-    background-position: center;
-    /* background-size: cover; */
-    height: 60vh;
-    /* background-color: rgb(33, 158, 188); */
-}
-
+/* https://www.css3.info/preview/box-shadow/ */
 #perfilPhoto {
     height: 250px;
     border-radius: 100%;
@@ -156,16 +158,20 @@ ol li {
 
 footer {
     width: 100vw;
-    height: auto;
+    height: 100px;
     bottom: 0;
     background-color: rgb(142, 202, 230);
     font-size: 16px;
+    text-align: center;
 }
 
-#footerOthers {
-    padding: 10px;
+#navFooter {
+    padding-top: 35px;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    text-align: center;
     /* height: 200px; */
 }
 
