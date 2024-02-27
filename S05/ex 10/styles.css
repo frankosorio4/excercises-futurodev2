@@ -74,12 +74,12 @@ header {
 
 #nome{
     overflow: hidden; 
-    animation: animate 1.5s linear forwards;
+    animation: animate 2s linear forwards;
 }
 
 #nome2{
     overflow: hidden; 
-    animation: animate 2.5s linear forwards;
+    animation: animate 3s linear forwards;
 }
 
 /* --------ANIMATIO APPERING-------------- */
@@ -107,6 +107,9 @@ main {
 #perfilPhoto {
     height: 250px;
     border-radius: 100%;
+    -moz-box-shadow: 0 0 5px 5px #93aed1;
+    -webkit-box-shadow: 0 0 5px 5px#93aed1;
+    box-shadow: 0 0 5px 5px #93aed1;
 }
 
 .navLink {
