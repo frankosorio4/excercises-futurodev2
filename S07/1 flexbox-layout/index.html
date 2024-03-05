@@ -1,5 +1,5 @@
 <!--  
-Ex 2 - Construir um layout com sidebar / header / content utilizando grid
+Construir um layout com sidebar / header / content utilizando flexbox
 Desenvolva uma arquitetura de layout que seja dividida em 3 grandes áreas.
     -Sidebar - como um menu lateral;
     -Header;
@@ -14,25 +14,26 @@ Desenvolva uma arquitetura de layout que seja dividida em 3 grandes áreas.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>EX 2</title>
+    <title>EX 1 Flexbox</title>
 </head>
 
 <body>
+    <header id="header">
+        <p>This is the header area</p>
+    </header>
 
-    <div class="gridContainer">
-        <header id="header" class="header">
-            <span>This is the header area</span>
-        </header>
-    
-        <div id="sideBar" class="sideBar">
-            <span>This is the side bar</span>
+    <div class="backheader" style="height: 60px;"></div>
+
+
+    <div id="sideBarMain">
+        <div id="sideBar">
+            <p>This is the side bar</p>
         </div>
-    
-        <main id="main" class="main">
-            <span>This is the main area</span>
+
+        <main id="main">
+            <p>This is the main area</p>
         </main>
     </div>
-
 
 </body>
 
