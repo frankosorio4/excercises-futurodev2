@@ -1,0 +1,123 @@
+/* #FFFFFF (texto principal)
+#FFBF00 (botão de ação)
+#332200 (cor do texto do botão de ação)
+#000 (background)
+#B2B2B2 (cor do subtitulo) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --corTexPrin: #FFFFFF;
+    --corSubtit:#B2B2B2;
+    --corBtn: #FFBF00;
+    --corTxtBtn: #332200;
+    --bgr: #000;
+    /* --corBtnHeader:#111111; */
+}
+
+.corsubtit{
+    color: var(--corSubtit);
+}
+
+#dot{
+    color: var(--corBtn);
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bgr);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bgr);
+    color: var(--corTexPrin);
+    padding: 20px 5% 20px 5%;
+}
+
+#tituloHeader{
+    padding-left: 10px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+header a{
+    color: var(--corTexPrin);
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+.corPrincipal{
+    color: var(--corTexPrin);
+}
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    height: 84%;
+}
+
+#divLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    width: 45vw;
+    height: 100%;
+}
+
+#texto1{
+    font-size: 64px;
+    font-weight: 600;
+}
+
+#texto2{
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#escolhaLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 50px;
+    padding: 0 32px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color: var(--corTxtBtn);
+    background-color: var(--corBtn);
+}
+
+#escolhaLink:hover {
+    background-color: #daa812;
+    /* transition: 0.5s; */
+}
+
+#divImage{
+    background-image: url("assets/bike2.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 100%;
+    width: 45vw;
+    border-radius: 5px;
+}
+
+
