@@ -1,0 +1,152 @@
+/* Utilizar CSS Grid ou Flexbox para a base da tela.
+Siga uma arquitetura próxima a imagem abaixo, não necessita copiar todos os elementos visuais / design. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mt-14{
+    margin-top: 14px;
+}
+
+.mt-28{
+    margin-top: 28px;
+}
+
+.mtb-14{
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(160, 204, 219), rgb(204, 184, 214));
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 10vh;
+    height: 80vh;
+    width: 70vw;
+}
+
+.divLeft{
+    /* display: flex;
+    align-items: end; */
+    /* background-color: rgb(149, 197, 219); */
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 4% 6%;
+    background-image: url("assets/Mobile-login-Cristina.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.divRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(223, 211, 211); */
+    border-radius: 10px;
+}
+
+.divRight form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 230px;
+}
+
+form input{
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(222, 248, 255);
+}
+
+form button{
+    height: 36px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(81, 81, 221);
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;/* Safari */
+    transition-duration: 0.4s;
+}
+
+/* we need a div outside this image in order to make a position relative with the dad element and apply position ag=bsolute to the child element */
+.divTogglePassword {
+    position: relative;
+    width: 230px;
+}
+  
+#togglePassword {
+    position: absolute;
+    transform: translateY(-150%);
+    cursor: pointer;
+    right: 0;
+    padding-right: 10px;
+    /* top: 50%;
+    right: 10px; */
+}
+
+#submitBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#forgot{
+    text-align: end;
+    font-size: 12px;
+}
+
+.socialNetworks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.socialNetworks .aIcon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(148, 144, 144);
+    border: solid 1px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    width: 230px;
+}
+
+.imgIcon{
+    height:20px
+}
