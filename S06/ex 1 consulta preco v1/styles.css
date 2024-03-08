@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mt-14{
+    margin-top: 14px;
+}
+
+.mt-28{
+    margin-top: 28px;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("assets/supermarket1.jpg");
+    background-size: cover;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 70%;
+}
+
+#divconsultarComprar{
+    border: solid 1px lightgray;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#labelInput{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#divResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 250px;
+    background-color: lightgray;
+    border-radius: 5px;
+    border: none;
+}
+
+#inputNameCod{
+    width: 150px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    /* border: solid 1px rgb(97, 96, 96); */
+}
+
+#divBtnComprar{
+    text-align: center;
+}
+
+.btn{
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #2c2c2c;
+    color: white;
+    border-radius: 5px;
+}

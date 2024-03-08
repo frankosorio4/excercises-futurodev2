@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mt-14{
+    margin-top: 14px;
+}
+
+.mt-28{
+    margin-top: 28px;
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("assets/supermarket1.jpg");
+    background-size: cover;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+    width: 80%;
+}
+
+#divconsultarComprar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    /* border: solid 1px lightgray; */
+    border: none;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0.75);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#labelInput{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#inputNameCod{
+    width: 250px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    /* border: solid 1px rgb(97, 96, 96); */
+}
+
+#divResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    height: 36px;
+    width: 250px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#divBtnComprar{
+    text-align: center;
+}
+
+.btn{
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgb(187, 183, 183);
+    color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:hover{
+    background-color:  rgb(153, 148, 148);
+}
+
+#divListaProdutos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* border: solid 1px lightgray; */
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0.75);
+}
+
+.divTabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td {
+    border: 2px solid white;
+    text-align: left;
+    padding: 5px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr:hover {background-color: coral;}

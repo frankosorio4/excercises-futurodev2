@@ -1,0 +1,64 @@
+<!-- Desenvolva uma tela para simular consulta de preços e compra de produtos de mercado
+- Tela deve conter os seguintes elementos:
+- Input para informar código ou nome do produto;
+- Botão para consultar valor;
+- Botão para comprar produto consultado; -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Consulta Ex1</title>
+</head>
+
+<body>
+    <main class="main">
+
+        <div Id="divconsultarComprar">
+            <div>
+                <h1 class="titulo">Consulta de preço</h1>
+            </div>
+
+            <div class="form mt-28">
+                <form id="consultarForm">
+
+                    <div id="divInputConsultar" class="mt-14">
+                        <label id="labelInput" for="nameCod">Digite o nome ou codigo do produto:</label>
+                        <br>
+                        <input id="inputNameCod" class="mt-14" type="text" name="nameCod" maxlength="15" required>
+                        <button id="consultarBtn" class="btn" type="submit">Consultar</button>
+                    </div>
+
+                    <div id="divResult" class="mt-14"><b>Div-Result</b></div>
+
+                    <div id="divBtnComprar">
+                        <button id="comprarBtn" class="btn mt-14">Comprar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div id="listaProdutos">
+            <table id="tablaProdutos">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+
+<!-- https://www.freepik.com/free-photo/abstract-blur-shopping-mall_1136121.htm#page=2&query=supermarket&position=2&from_view=keyword&track=sph&uuid=e2e36108-2bbf-423b-81ca-83a331e9bdf3 -->
