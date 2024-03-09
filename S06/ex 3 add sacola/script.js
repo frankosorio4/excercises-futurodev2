@@ -22,9 +22,9 @@ let tablaSacola = document.querySelector("#tablaSacola tbody");
 //let tablaSacola = document.getElementById("tablaSacola");
 
 let itemSacola = '';// VARIABLE para guardar item generado en buscarItem()
-let sacola = [] ;// array para guardar objetos de la sacola
+let sacola = [];// array para guardar objetos de la sacola
 
-function limpar(){
+function limpar() {
     //event.preventDefault();
     // accesar y modificar atributo VALUE  de la input
     itemInput.value = '';
@@ -34,14 +34,14 @@ function limpar(){
     itemSacola = '';
 }
 
-function buscarItem(event){
+function buscarItem(event) {
     event.preventDefault();
     itemSacola = '';
     let resultBusqueda = [];
     let digitado = itemInput.value;
     console.log(digitado);
 
-    if (digitado===''){
+    if (digitado === '') {
         divResult.textContent = '';
         divResult.style.backgroundColor = 'white';
         return
@@ -54,16 +54,16 @@ function buscarItem(event){
             fruta.codigo.toLowerCase() === digitado.toLowerCase()
         )
     );
-    
-    if (resultBusqueda === -1){
+
+    if (resultBusqueda === -1) {
         divResult.textContent = 'O produto não existe.';
         divResult.style.color = 'red';
         divResult.style.fontWeight = '600';
     }
-    else{
+    else {
         let item = frutas[resultBusqueda];
         let f = item.fruit
-        let p =item.price
+        let p = item.price
         divResult.textContent = f + ' = ' + p + '$';
         divResult.style.color = 'blue';
         divResult.style.fontWeight = '600';
@@ -71,34 +71,32 @@ function buscarItem(event){
     }
 }
 
-function addSacola(){
+function addSacola() {
     //console.log(itemSacola != '');
-    if (itemSacola != ''){
+    if (itemSacola != '') {
         sacola.push(itemSacola);
-        console.log('sacola',sacola);
+        console.log('sacola', sacola);
         addRowToTabla();
-        //itemSacola = '';
     };
 }
 
-function addRowToTabla(){
-    if (sacola.length > 0){
-        sacola.forEach((item) => {
-            // Create a table row
-            const tableRow = document.createElement("tr"); 
-          
-            // Create data cells for each property and set content
-            const fruitCell = document.createElement("td");
-            fruitCell.textContent = item.fruit;
-            tableRow.appendChild(fruitCell);
-          
-            const priceCell = document.createElement("td");
-            // Add dollar sign for formatting
-            priceCell.textContent = `$${item.price}`; 
-            tableRow.appendChild(priceCell);
-          
-            // Append the table row to the table body
-            tablaSacola.appendChild(tableRow);
-        });
-    }
+function addRowToTabla() {
+    //if (itemSacola.length > 0){}// no es necesario
+    //Sacola.forEach((item) => { }//solo para arrays
+
+    // Create a table row
+    const tableRow = document.createElement("tr");
+
+    // Create data cells for each property and set content
+    const fruitCell = document.createElement("td");
+    fruitCell.textContent = itemSacola.fruit;
+    tableRow.appendChild(fruitCell);
+
+    const priceCell = document.createElement("td");
+    // Add dollar sign for formatting
+    priceCell.textContent = `$${itemSacola.price}`;
+    tableRow.appendChild(priceCell);
+
+    // Append the table row to the table body
+    tablaSacola.appendChild(tableRow);
 }
