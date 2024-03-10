@@ -17,12 +17,12 @@ let itemInput = document.getElementById("inputNameCod");
 let btnConsultar = document.getElementById("btnConsultar");
 let btnLimpar = document.getElementById("btnLimpar");
 let divResult = document.getElementById("divResult");
-let btnSacola = document.getElementById("btnSacola");
-let tablaSacola = document.querySelector("#tablaSacola tbody");
-//let tablaSacola = document.getElementById("tablaSacola");
+let btnCarrinho = document.getElementById("btnCarrinho");
+let tablaCarrinho = document.querySelector("#tablaCarrinho tbody");
+//let tablaCarrinho = document.getElementById("tablaCarrinho");
 
-let itemSacola = '';// VARIABLE para guardar item generado en buscarItem()
-let sacola = [];// array para guardar objetos de la sacola
+let itemCarrinho = '';// VARIABLE para guardar item generado en buscarItem()
+let carrinho = [];// array para guardar objetos de la carrinho
 
 function limpar() {
     //event.preventDefault();
@@ -30,13 +30,13 @@ function limpar() {
     itemInput.value = '';
     // limpar a divResult
     divResult.textContent = '';
-    // borrar variable temporal para sacola
-    itemSacola = '';
+    // borrar variable temporal para carrinho
+    itemCarrinho = '';
 }
 
 function buscarItem(event) {
     event.preventDefault();
-    itemSacola = '';
+    itemCarrinho = '';
     let resultBusqueda = [];
     let digitado = itemInput.value;
     console.log(digitado);
@@ -67,54 +67,54 @@ function buscarItem(event) {
         divResult.textContent = f + ' = ' + p + '$';
         divResult.style.color = 'blue';
         divResult.style.fontWeight = '600';
-        itemSacola = item;
+        itemCarrinho = item;
     }
 }
 
-function addSacola() {
-    //console.log(itemSacola != '');
-    if (itemSacola != '') {
-        sacola.push(itemSacola);
-        console.log('sacola', sacola);
+function addCarrinho() {
+    //console.log(itemCarrinho != '');
+    if (itemCarrinho != '') {
+        carrinho.push(itemCarrinho);
+        console.log('Carrinho', carrinho);
         addRowToTabla();
     };
 }
 
 function addRowToTabla() {
-    //if (itemSacola.length > 0){}// no es necesario
-    //sacola.forEach((item) => { }}//solo para arrays
+    //if (itemCarrinho.length > 0){}// no es necesario
+    //carrinho.forEach((item) => { }}//solo para arrays
 
     // Create a table row
     const tableRow = document.createElement("tr");
 
     // Create data cells for each property and set content
     const fruitCell = document.createElement("td");
-    fruitCell.textContent = itemSacola.fruit;
+    fruitCell.textContent = itemCarrinho.fruit;
     tableRow.appendChild(fruitCell);
 
     const priceCell = document.createElement("td");
     // Add dollar sign for formatting
-    priceCell.textContent = `$${itemSacola.price}`;
+    priceCell.textContent = `$${itemCarrinho.price}`;
     tableRow.appendChild(priceCell);
 
     // Append the table row to the table body
-    tablaSacola.appendChild(tableRow);
+    tablaCarrinho.appendChild(tableRow);
 }
 
 function calTotal(){
     let tot = 0;
-    if (sacola.length > 0){
-        sacola.forEach((item) => {
+    if (carrinho.length > 0){
+        carrinho.forEach((item) => {
             tot += item.price;
         }
         )
     }
     else{
-        alert('A sacola esta vazia.');
+        alert('O Carrinho esta vazio.');
         return
     }
-    divTotal = document.getElementById('divTotalSacola');
-    divTotal.textContent = 'Total Sacola = ' + tot + ' $';
+    divTotal = document.getElementById('divTotalCarrinho');
+    divTotal.textContent = 'Total Carrinho = ' + tot + ' $';
     divTotal.style.color = 'black';
     divTotal.style.backgroundColor = 'white';
     divTotal.style.fontWeight = '600';

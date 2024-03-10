@@ -21,7 +21,7 @@
     </div>
     <main class="main">
 
-        <div id="divConsultarSacola">
+        <div id="divConsultarCarrinho">
             <div>
                 <h1 class="tituloDiv">Consulta de preço</h1>
             </div>
@@ -29,7 +29,7 @@
             <div class="form mt-28">
                 <form id="consultarForm">
 
-                    <label id="labelInput" for="nameCod">Digite o nome ou codigo do produto<br> e coloque na sacola:</label>
+                    <label id="labelInput" for="nameCod">Digite o nome ou codigo do produto<br> e adicione ao carrinho:</label>
 
                     <input id="inputNameCod" class="mt-14" type="text" name="nameCod" maxlength="15" autocomplete="off" required>
 
@@ -43,8 +43,8 @@
                     <button id="btnLimpar" class="btn mt-14" onclick="limpar()">Limpar</button>
                 </div>
 
-                <div id="divBtnSacola">
-                    <button id="btnSacola" class="btn mt-40" onclick="addSacola()">Anadir a Sacola</button>
+                <div id="divBtnCarrinho">
+                    <button id="btnCarrinho" class="btn mt-40" onclick="addCarrinho()">Adicionar ao Carrinho</button>
                 </div>
 
             </div>
@@ -117,13 +117,13 @@
             </div>
         </div>
 
-        <div id="divSacola">
+        <div id="divCarrinho">
             <div>
-                <h1 class="tituloDiv">Sacola</h1>
+                <h1 class="tituloDiv">Carrinho</h1>
             </div>
             <div>
                 <!-- style="display: none;" -->
-                <table id="tablaSacola" class="mt-14">
+                <table id="tablaCarrinho" class="mt-14">
                     <thead>
                         <tr>
                             <th>Fruta</th>
@@ -136,11 +136,11 @@
             </div>
             <div class="divTotal mt-14">
                 <div>
-                    <button id="totalSacola" class="btn" onclick="calTotal()">
-                        Total Sacola
+                    <button id="btnTotalCarrinho" class="btn" onclick="calTotal()">
+                        Total Carrinho
                     </button>
                 </div>
-                <div id="divTotalSacola" class="mt-14"></div>
+                <div id="divTotalCarrinho" class="mt-14"></div>
             </div>
         </div>
 
