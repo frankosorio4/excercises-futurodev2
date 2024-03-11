@@ -121,3 +121,10 @@ function calTotal(){
     divTotal.style.borderRadius = '5px';
     divTotal.style.padding = '10px';
 }
+
+function comprar(){
+    if (carrinho.length == 0){
+        alert('O Carrinho esta vazio.');
+        return
+    }
+}

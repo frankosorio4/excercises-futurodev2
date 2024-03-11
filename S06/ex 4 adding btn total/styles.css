@@ -43,6 +43,11 @@ body{
     /* gap: 20px; */
 }
 
+.tituloDiv{
+    font-size: 26px;
+    font-weight: 600;
+}
+
 #divConsultarCarrinho{
     display: flex;
     flex-direction: column;
@@ -91,11 +96,10 @@ form , .form{
     font-size: 16px;
 }
 
-#divBtnCarrinho{
-    text-align: center;
-}
-
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30px;
     width: 100px;
     font-size: 14px;
@@ -104,6 +108,10 @@ form , .form{
     color: black;
     border-radius: 5px;
     border: none;
+}
+
+#divBtnCarrinho{
+    text-align: center;
 }
 
 #btnCarrinho{
@@ -140,6 +148,7 @@ table, th, td {
 
 table{
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 tr:hover {background-color: coral;}
