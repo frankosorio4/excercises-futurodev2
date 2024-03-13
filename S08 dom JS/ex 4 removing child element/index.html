@@ -1,0 +1,35 @@
+<!--  Ex 4 - Remover Elemento Filho
+- Remova um elemento filho de um elemento pai na página HTML.. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3 DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="title">Elementos HTML</h1>
+
+    <div class="container mt-28">
+        <h2>Removendo um elemento filho de um elemento pai na página HTML.</h2>
+    
+        <div class="container2 mt-14">
+            <h3>Este é uma DIV pai</h3>
+            <div id='divFather' class="divFather mt-14">
+
+                <div class="childElement">Elemento filho 1</div>
+                <div class="childElement">Elemento filho 2</div>
+                <div class="childElement">Elemento filho 3</div>
+            
+            </div>
+        </div>
+
+        <button id="introduceElement" class="mt-28" onclick="remove()">Remover elemento filho</button>
+    </div>
+
+
+</body>
+</html>
