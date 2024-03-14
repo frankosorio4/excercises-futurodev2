@@ -46,7 +46,20 @@ button{
     font-weight: 600;
 }
 
-ul li{
-    margin: 15px;
-    /* color:rgb(185, 32, 32); */
+.list{
+    margin: 25px;
+    font-weight: 600;
+}
+
+.elementLi{
+    display: flex;
+    align-items: center;
+    /* list-style-type: circle; */
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgb(66, 68, 141);
+    color: white;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
 }
