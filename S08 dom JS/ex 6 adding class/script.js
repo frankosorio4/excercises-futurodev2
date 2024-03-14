@@ -3,7 +3,7 @@ console.log("script.js");
 let list2 = document.getElementById('list2');
 console.log(list2);
 
-function modifyStyle(){
+function addClass(){
     list2.setAttribute('class','list');
     //console.log(list2);
     let l = list2.children.length;
