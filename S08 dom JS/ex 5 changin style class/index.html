@@ -1,0 +1,40 @@
+<!--  Ex 5 - Alterar Estilo por Classe
+- Altere o estilo de todos os elementos de uma página HTML que tenham uma determinada classe. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3 DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="title">Elementos HTML</h1>
+
+    <div class="container mt-28">
+        <h2>Alterando o estilo de todos os elementos de uma página HTML que tenham uma determinada classe.</h2><br>
+
+        <h3 >Lista 1. Modificando o style da lista inteira: backgroundColor, color, padding, e fontWeight.</h3>
+    
+        <ul class="listToModify mt-14">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <h3>Lista 2. Modificando o style só dos elementos da lista: backgroundColor, color, padding, e fontWeight</h3>
+    
+        <ul class="mt-14">
+            <li class="listToModify">Item 1</li>
+            <li class="listToModify">Item 2</li>
+            <li class="listToModify">Item 3</li>
+        </ul>
+
+        <button id="modifyStyle" class="mt-14" onclick="modifyStyle()">Modificar style pela classe</button>
+    </div>
+
+
+</body>
+</html>
