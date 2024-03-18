@@ -63,10 +63,11 @@ function adicionarTarefa() {
     divListaTarefas.appendChild(divTarefa);
     //console.log(divTarefa);
 
-    let tempTask = {
-        task : input.value,
-        stage : 'new'
-    };
+    // for local store
+    // let tempTask = {
+    //     task : input.value,
+    //     stage : 'new'
+    // };
 
     input.value = "";
     //tarefasCreadasLocalSt.push(tempTask);
