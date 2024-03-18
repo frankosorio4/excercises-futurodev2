@@ -95,6 +95,7 @@ function addCarrinho() {
         //------LOCAL STORAGE--------------
         //----------------------------------
         //Guardando el item consultado actual 
+        //se guarda como string
         localStorage.setItem('produto-consultado', JSON.stringify(itemCarrinhoTemp));
 
         //mostrando el item consultado actual
