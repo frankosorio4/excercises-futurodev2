@@ -1,0 +1,36 @@
+<!-- Ex 10 - Lista de tarefas
+- Crie uma lista de tarefas onde o usuário pode adicionar novas tarefas, marcá-las como concluídas e removê-las.. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10 DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <div class="container mt-28">
+        <h1 class="title">Lista de tarefas</h1>
+
+        <div class="divInput mt-14">
+            <input type="text" id="inputTarefa" class="inputTarefa" placeholder="Adiçionar nova Tarefa" maxlength="30" autocomplete="off">
+            <button id="adicionarTarefa" class="btn" onclick="adicionarTarefa()">Adicionar</button>
+            <!-- <hr style="height:2px;border-width:0;color:gray;background-color:black"> -->
+        </div>
+
+
+        <div id="divListaTarefas" class="divListaTarefas mt-28">
+
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
+<!-- https://www.pexels.com/photo/set-of-empty-white-papers-attached-on-pink-wall-7319325/ -->

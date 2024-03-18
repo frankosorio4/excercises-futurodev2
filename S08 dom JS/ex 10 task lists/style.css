@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mt-14 {
+    margin-top: 14px;
+}
+
+.mt-28 {
+    margin-top: 28px;
+}
+
+body {
+    height: 100vh;
+    /* background-color: rgb(189, 168, 168); */
+    background-image: url('assets/pexels-angela-roma-7319325.jpg');
+    background-size: cover;
+}
+
+/* .title{
+    padding-top: 50px;
+    text-align: center;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin-left: 15vw;
+    /* margin-right: 20px; */
+    border: solid 3px black;
+    border-radius: 10px;
+}
+
+.divInput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.divListaTarefas{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputTarefa {
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border: solid 2px gray;
+    padding-left: 5px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-weight: 600;
+}
+
+/* .divListaTatefas{
+    
+} */
+
+/* div creada no DOM*/
+.divTarefa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    gap: 10px;
+    /* background-color: lightgray; */
+    border-radius: 10px;
+    margin-top: 14px;
+}
+
+.spanTarefa{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(116, 212, 116);
+    height: 30px;
+    border-radius: 10px;
+}
+
+.divBotoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
