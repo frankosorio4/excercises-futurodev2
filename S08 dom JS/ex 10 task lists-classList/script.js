@@ -77,6 +77,12 @@ function adicionarTarefa() {
 // ------------notas CLASSLIST------------------------
 //Para establecer una nueva clase a un elemento usamos
 //element.setAttribute('class', 'name_class'); 
-//ó
+//ó directamente
 //elelemnt.classList = 'name_class'
 //este ultimo comando accesa directamenete a DOMTokenList (the list of CSS classes associated with an HTML element) de la pagina y adjunta esa nueva classe al elemento seleccionado.
+// hay 3 metodos que se aplican junto a classList
+//element.classList.add()
+//element.classList.remove()
+//element.classList.toggle()
+
+//https://medium.com/@shivani.007/classlist-in-javascript-b73cfc598e70
