@@ -1,6 +1,6 @@
 console.log("script.js");
 
-let tarefasCreadas = [];
+let tarefasCreadasLocalSt = [];
 
 function adicionarTarefa() {
     let input = document.getElementById('inputTarefa');
@@ -13,12 +13,13 @@ function adicionarTarefa() {
     
     // creating the father element
     let divTarefa = document.createElement('div');
-    divTarefa.classList = 'divTarefa';
+    divTarefa.setAttribute('class','divTarefa');
+    //spanTarefa.classList('divTarefa')
 
     //adding the input task to a span
     let spanTarefa = document.createElement('span');
     // spanTarefa.append(document.createTextNode(input.value));
-    spanTarefa.textContent =input.value;
+    spanTarefa.textContent =input.value.trim();
     // spanTarefa.setAttribute('class', 'spanTarefa');
     spanTarefa.classList = 'spanTarefa';
     divTarefa.appendChild(spanTarefa);
@@ -37,9 +38,8 @@ function adicionarTarefa() {
     botaoConcluir.style.backgroundColor = 'green';
     botaoConcluir.style.color = 'white';
     botaoConcluir.onclick = function (){
-        console.log('entro');
         divTarefa.classList.toggle("completed");
-        //set or unset the attribute
+        //set the atribute or unset the attribute if it is already set
     }
     divBotoes.appendChild(botaoConcluir);
 
@@ -63,13 +63,19 @@ function adicionarTarefa() {
     divListaTarefas.appendChild(divTarefa);
     //console.log(divTarefa);
 
+    let tempTask = {
+        task : input.value,
+        stage : 'new'
+    };
+
     input.value = "";
-    tarefasCreadas.push(divTarefa);
+    //tarefasCreadasLocalSt.push(tempTask);
+    //localStorage.setItem('tarefasCreadas', JSON.stringify(tarefasCreadasLocalSt));
 }
 
-// notas CLASSLIST------------------------
-//en vez de usar 
-//elelment.setAttribute('class', 'name_class'); 
-//usamos
+// ------------notas CLASSLIST------------------------
+//Para establecer una nueva clase a un elemento usamos
+//element.setAttribute('class', 'name_class'); 
+//ó
 //elelemnt.classList = 'name_class'
-//que guarda los elelmentos generados en DOM en una lista, de alli se pueden modificar posteriormente.
+//este ultimo comando accesa directamenete a DOMTokenList (the list of CSS classes associated with an HTML element) de la pagina y adjunta esa nueva classe al elemento seleccionado.
