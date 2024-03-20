@@ -1,6 +1,6 @@
 console.log("script.js");
 
-let tarefasCreadasLocalSt = [];
+let tarefasCreadas = [];//to save the new tasks
 
 function adicionarTarefa() {
     let input = document.getElementById('inputTarefa');
@@ -40,6 +40,7 @@ function adicionarTarefa() {
     botaoConcluir.onclick = function (){
         divTarefa.classList.toggle("completed");
         //set the atribute or unset the attribute if it is already set
+        // divTarefa.className;
     }
     divBotoes.appendChild(botaoConcluir);
 
@@ -63,15 +64,16 @@ function adicionarTarefa() {
     divListaTarefas.appendChild(divTarefa);
     //console.log(divTarefa);
 
-    // for local store
+    //for local store
     // let tempTask = {
     //     task : input.value,
-    //     stage : 'new'
+    //     class : 'none'
     // };
 
     input.value = "";
-    //tarefasCreadasLocalSt.push(tempTask);
-    //localStorage.setItem('tarefasCreadas', JSON.stringify(tarefasCreadasLocalSt));
+    // tarefasCreadas.push(tempTask);
+    // //saving in LS
+    // localStorage.setItem('tarefasCreadasLocalSt', JSON.stringify(tarefasCreadas));
 }
 
 // ------------notas CLASSLIST------------------------
