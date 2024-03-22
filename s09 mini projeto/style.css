@@ -54,14 +54,14 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
+    width: 75px;
 }
 
 .divTime2{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 110px;
 }
 
 .btn{
