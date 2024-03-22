@@ -7,8 +7,8 @@ let iniciarBtn = document.getElementById('iniciarBtn');
 
 let interval;
 let ms = 1000;
-let segundos = 10;// cambiar a 60
-let minutos = 12;// Inicial time
+let segundos = 60;
+let minutos = 25;// Inicial time
 let iniciarInterval = true;// To allow start only start once the interval and avoid to start again without pause first
 
 
@@ -29,14 +29,14 @@ function updateTimer(){
         // console.log(segundos);
         divSegundos.innerHTML = formatTime(segundos);
     }
-    if (segundos === 10){
+    if (segundos === 60){
         minutos--;
         segundos--;
         divSegundos.innerHTML = formatTime(segundos);
         divMinutos.innerHTML = formatTime(minutos);
     }
     if (segundos === -1){
-        segundos = 10;
+        segundos = 60;
         //segundos--;
     }
 }
@@ -53,12 +53,12 @@ function resetTimer(){
     clearInterval(interval);
     iniciarInterval = true;
     iniciarBtn.innerHTML = 'Iniciar';
-    divMinutos.innerHTML = '12';
+    divMinutos.innerHTML = '25';
     divSegundos.innerHTML = '00';
     divMs.innerHTML = '000';
     ms = 1000;
-    segundos = 10;
-    minutos = 12;
+    segundos = 60;
+    minutos = 25;
 }
 
 function formatTime(time) {

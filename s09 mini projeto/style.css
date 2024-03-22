@@ -61,7 +61,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 110px;
+    width: 90px;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgb(105, 104, 104);
 }
 
 .btn{
