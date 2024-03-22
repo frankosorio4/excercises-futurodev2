@@ -2,8 +2,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mt-14{
+    margin-top: 14px;
+}
+
+.mt-28{
+    margin-top: 28px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 20px;
 }
 
 body{
     height: 100vh;
+    background-color: rgb(188, 223, 243);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 5vw;
+}
+
+.divContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divTimer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.divBtns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.divTime1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+}
+
+.divTime2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgb(105, 104, 104);
+}
+
+.btn{
+    height: 36px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid rgb(97, 97, 97);
+    font-size: 18px;
+    font-weight: 600;
 }
