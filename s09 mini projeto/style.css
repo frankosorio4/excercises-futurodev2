@@ -20,7 +20,7 @@
 
 body{
     height: 100vh;
-    background-color: rgb(188, 223, 243);
+    background-color: rgb(246, 174, 45);
 }
 
 main{
@@ -40,24 +40,18 @@ main{
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 600;
 }
 
-.divBtns{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.divTime1{
+.divTime{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75px;
 }
 
-.divTime2{
+/* .divTime2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,13 +59,41 @@ main{
     font-weight: 500;
     font-size: 40px;
     color: rgb(105, 104, 104);
+} */
+
+.divBtns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn{
     height: 36px;
     width: 100px;
     border-radius: 10px;
-    border: 1px solid rgb(97, 97, 97);
-    font-size: 18px;
+    /* border: 1px solid rgb(97, 97, 97); */
+    font-size: 20px;
     font-weight: 600;
 }
+
+#startBtn{
+    background-color: rgb(47, 72, 88);
+    border: none;
+}
+
+#pauseBtn{
+    background-color: rgb(51, 101, 138);
+    border: none;
+}
+
+#resetBtn{
+    background-color: rgb(242, 100, 25);
+    border: none;
+}
+
+.divExercises{
+    text-align: left;
+}
+
+
+/* https://coolors.co/palette/33658a-86bbd8-2f4858-f6ae2d-f26419 */

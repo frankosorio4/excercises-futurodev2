@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script-timer.js" defer></script>
+    <!-- <script src="script-api.js" defer></script> -->
+    <!-- <script src="script-timer2.js" defer></script> -->
     <title>Pomodoro</title>
 </head>
 <body>
@@ -15,23 +17,31 @@
         </div>
         
         <div class="divContainer mt-14">
-            <h1 class="title">Timer</h1>
+            <h1 id='titleTimer' class="title">Task Timer</h1>
             <div class="divTimer mt-14">
-                <div id="divMinutos" class="divTime1">25</div>
+                <div id="divMinutes" class="divTime">25</div>
                 <div class="separator">:</div>
-                <div id="divSegundos" class="divTime1">00</div>
-                <div class="separator">:</div>
-                <div id="divMs" class="divTime2">000</div>
+                <div id="divSeconds" class="divTime">00</div>
+                <!-- <div class="separator">:</div>
+                <div id="divMs" class="divTime2">000</div> -->
             </div>
             <div class="divBtns mt-14">
-                <button id='iniciarBtn' class="btn" onclick="startTimer()">Iniciar</button>
-                <button id='pausarBtn' class="btn" onclick="pauseTimer()">Pausar</button>
-                <button id='resetearBtn' class="btn" onclick="resetTimer()">Resetar</button>
+                <button id='startBtn' class="btn" onclick="startTimer()">Start</button>
+                <button id='pauseBtn' class="btn" onclick="pauseTimer()" style="display: none;">Pause</button>
+                <button id='resetBtn' class="btn" onclick="resetTimer()">Reset</button>
                 
             </div>
         </div>
-        
-        
+
+        <div id="divExercises" class="divExercises mt-14" style="display:none">
+            <!-- <button id="changeBtn">Change</button> -->
+            <h3 class="mt-28">Exercicio de elongaçao:</h3>
+            <span id="nameExercise" class="nameExercise"></span>
+            <h3 class="mt-14">Dificuldade:</h3>
+            <p id="difficultyExercise" class="difficultyExercise"></p>
+            <h3 class="mt-14">Desciçao execicio:</h3>
+            <p id="descriptionExercise" class="descriptionExercise mt-14"></p>
+        </div>
     </main>
 </body>
 </html>
