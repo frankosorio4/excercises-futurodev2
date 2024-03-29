@@ -46,7 +46,7 @@ main{
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 600
 }
 
