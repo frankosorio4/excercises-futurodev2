@@ -1,6 +1,9 @@
-console.log('script-timer.js');
+console.log('script.js');
 
-//TTML elements
+//----------------------------------------------------------------------------
+//----------------------------- 1st part Timer--------------------------------
+//----------------------------------------------------------------------------
+//HTML elements
 let body = document.querySelector('body');
 let divInfo = document.getElementById('divInfo');
 let titleTimer = document.getElementById('titleTimer');
@@ -15,9 +18,10 @@ let resetBtn = document.getElementById('resetBtn');
 let resetBtn2 = document.getElementById('resetBtn2');
 
 //SETTING the interval duration
-let secondsSet = 3;//defaul 60. Range 1-60 sec work-time
-let minutesSet = 1;//default 25. Range 1-60 min work-time
-let minutesSet2 = 1;//default 5 min excercise-time
+let secondsSet = 60;//defaul 60. Range 1-60 sec work-time
+let minutesSet = 25;//default 25. Range 1-60 min work-time
+let minutesSet2 = 5;//default 5 min excercise-time
+//divSeconds.innerHTML = formatTime(secondsSet);
 divMinutes.innerHTML = formatTime(minutesSet);
 
 //SETTING timer configuration (parameters)
@@ -31,7 +35,7 @@ let currentSession = 'work-time';
 function startTimer() {
     if (startInterval) {
         startBtn.style.display = 'none';
-        divInfo.style.display = 'none';
+        // divInfo.style.display = 'none';
         pauseBtn.style.display = 'block';
         startInterval = false;
         interval = setInterval(updateTimer, 10);
@@ -70,7 +74,7 @@ function updateTimer() {
                 body.style.backgroundColor = 'rgb(67, 213, 218)';
                 titleTimer.innerHTML = 'Exercise Time';
                 divMinutes.innerHTML = `${formatTime(minutesSet2)}`;
-                divSeconds.innerHTML = '00';
+                divSeconds.innerHTML = '10';
             } else {
                 currentSession = 'work-time';
                 divExercises.style.display = 'none';
@@ -100,7 +104,7 @@ function updateTimer() {
 function resetTimer() {
     clearInterval(interval);
     //updating html elements
-    divInfo.style.display = 'block';
+    //divInfo.style.display = 'block';
     startBtn.style.display = 'block';
     resetBtn.style.display = 'block';
     pauseBtn.style.display = 'none';
@@ -128,7 +132,7 @@ function resetTimer2() {
     minutesCounter = minutesSet2;
     body.style.backgroundColor = 'rgb(67, 213, 218)';
     titleTimer.innerHTML = 'Exercise Time';
-    divMinutes.innerHTML = `${formatTime(minutesSet2)}`;
+    divMinutes.innerHTML = `${formatTime(minutesSet2)}`;//
     divSeconds.innerHTML = '00';
     pauseTimer()
 }
@@ -269,3 +273,7 @@ function showExcercise() {
     console.log('performing excercise', actualExercise);//delete
     localStorage.setItem('actualExerciseLS', JSON.stringify(actualExerciseLS));
 }
+
+
+//API KEY
+//j1AKczm+K6sdLu/F1QUhEw==XyymCozQErXeuzGs
