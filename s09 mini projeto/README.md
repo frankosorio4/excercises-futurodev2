@@ -1,1 +1,1 @@
-README
+This is one of my first projects using HTML, Javascript, and CSS. It consists of a pomodoro. The routine implemented set periods of 25 minutes of work (or study). After finishing that time, it will show the user an exercise to perform a stretching exercise for 5 minutes. Then they can start again with the routine. I used a free API to obtain the exercise from https://api.api-ninjas.com/v1/exercises?type=stretching. I implemented this routine using the method "setInterval()" of JS and all the basic elements of JS to validate the routines.
