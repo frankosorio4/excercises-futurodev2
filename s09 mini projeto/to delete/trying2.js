@@ -12,10 +12,9 @@ let startBtn = document.getElementById('startBtn');
 let pauseBtn = document.getElementById('pauseBtn');
 let endExerciseBtn = document.getElementById('endExerciseBtn');
 let resetBtn = document.getElementById('resetBtn');
-let resetBtn2 = document.getElementById('resetBtn2');
 
 //SETTING the interval duration
-let secondsSet = 3;//defaul 60. Range 1-60 sec work-time
+let secondsSet = 10;//defaul 60. Range 1-60 sec work-time
 let minutesSet = 1;//default 25. Range 1-60 min work-time
 let minutesSet2 = 1;//default 5 min excercise-time
 divMinutes.innerHTML = formatTime(minutesSet);
@@ -53,16 +52,13 @@ function updateTimer() {
             pauseBtn.style.display = 'none';
             startBtn.style.display = 'none';
             resetBtn.style.display = 'none';
-            resetBtn2.style.display = 'none';
             endExerciseBtn.style.display = 'block';
         }
         if (secondsCounter == -1 && minutesCounter == 0) {
-            //validation (switching schedule)
+            //validation (switch schedule)
             if (currentSession === 'work-time') {
                 currentSession = 'exercise-time';
                 divExercises.style.display = 'block';
-                resetBtn.style.display = 'none';
-                resetBtn2.style.display = 'block';
                 //endExerciseBtn.style.display = 'block';
                 showExcercise();
                 secondsCounter = secondsSet + 1;//delay
@@ -75,7 +71,6 @@ function updateTimer() {
                 currentSession = 'work-time';
                 divExercises.style.display = 'none';
                 endExerciseBtn.style.display = 'none';
-                resetBtn2.style.display = 'none';
                 secondsCounter = secondsSet + 1;//delay
                 minutesCounter = minutesSet;
                 body.style.backgroundColor = 'rgb(71, 204, 142)';
@@ -99,7 +94,7 @@ function updateTimer() {
 
 function resetTimer() {
     clearInterval(interval);
-    //updating html elements
+    //set default (html elements)
     divInfo.style.display = 'block';
     startBtn.style.display = 'block';
     resetBtn.style.display = 'block';
@@ -110,29 +105,13 @@ function resetTimer() {
     titleTimer.innerHTML = 'Work Time';
     divMinutes.innerHTML = `${formatTime(minutesSet)}`;
     divSeconds.innerHTML = '00';
-    //updating parameters js
+    //set default (script parameters)
     startInterval = true;// to able startTimer()
     msCounter = 1000;
     secondsCounter = secondsSet;
     minutesCounter = minutesSet;
     currentSession = 'work-time';
 }
-
-function resetTimer2() {
-    clearInterval(interval);
-    //updating html elements
-    currentSession = 'exercise-time';
-    divExercises.style.display = 'block';
-    showExcercise();
-    secondsCounter = secondsSet + 1;//delay
-    minutesCounter = minutesSet2;
-    body.style.backgroundColor = 'rgb(67, 213, 218)';
-    titleTimer.innerHTML = 'Exercise Time';
-    divMinutes.innerHTML = `${formatTime(minutesSet2)}`;
-    divSeconds.innerHTML = '00';
-    pauseTimer()
-}
-
 
 function pauseTimer() {
     if (!startInterval) {
@@ -146,7 +125,6 @@ function pauseTimer() {
 function endEcercise() {
     startBtn.style.display = 'block';
     pauseBtn.style.display = 'block';
-    //debugger;
     if (actualExercise === 9) {
         //clean LS
         localStorage.clear(); console.log('local store cleared');
@@ -158,14 +136,14 @@ function endEcercise() {
         offsetLS.number = offset;
         console.log('offset', offset);
         localStorage.setItem('offsetLS', JSON.stringify(offsetLS));
-        console.log('Set offset LS', localStorage.getItem('offsetLS'));
+        console.log('offset LS', localStorage.getItem('offsetLS'));
         //making new request
         requestExercises();
         resetTimer();
         return;
     }
     actualExercise++;
-    actualExerciseLS.number = actualExercise;
+    actualExerciseLS.number =actualExercise;
     localStorage.setItem('actualExerciseLS', JSON.stringify(actualExerciseLS));
     resetTimer();
 }
@@ -190,56 +168,48 @@ let listExercises = [];// to sae the request
 let excercisesTempString;//variable to read what are in LS
 // let data;
 let actualExercise = 0;// to go throught the array (index)
-let actualExerciseLS = { number: 0 };// to save actual exercise number in LS
+let actualExerciseLS = { number: '0' };// to save actual exercise number in LS
 let offset = 0;//to count the request. it begins in 0 (0,10,20,30,...),(offset += 10)
-let offsetLS = { number: 0 };// saving the offset value in LS
+let offsetLS = { number: '0' };// saving the offset value in LS
 // fetch('https://api.api-ninjas.com/v1/exercises?type=stretching&offset=10'// to obtain the next list, every list 10 items 
 
 function requestExercises() {
-    //searching in LS if there is 'actualExerciseLS'
-    let performedExerciseLS = localStorage.getItem('actualExerciseLS');
-    console.log('1-0 stage, OBTAINIG LS', performedExerciseLS);
+    let exercisePerformedLS = localStorage.getItem('actualExerciseLS');
+    console.log('1-0 stage, OBTAINIG LS', exercisePerformedLS);
     //1-1 stage, 1st run. anything in LS
-    if (!performedExerciseLS) {
+    if (!exercisePerformedLS) {
         console.log('1-1 request, 1st run. anything in LS');//delete
-        localStorage.setItem('offsetLS', JSON.stringify(offsetLS));
-        requestApi();//obtaining 1st list
+        if (offset === 150){//need improve
+            offset =0;
+        };
+        requestApi();
         return;
     }
     //1-2 stage, data in LS, after other cycles
-    if (JSON.parse(performedExerciseLS).number == 0) {
+    if (JSON.parse(exercisePerformedLS).number == 0) {
+        //obtainig value offset of LS
         console.log('1-2 request, data in LS');
-        //obtaining offset value from LS
         if (localStorage.getItem('offsetLS')) {
             offsetLS = JSON.parse(localStorage.getItem('offsetLS'));
-            offset = Number(offsetLS.number);
+            offset = offsetLS.number;
             console.log('offset', offset);
+            console.log('excercise to perform', actualExercise);
         }
-        //when we reach the page 150
-        if (offset === 150) {//needs improve
-            //updating LS AND JS
-            offset = 0;
-            offsetLS = { number: 0 };
-            localStorage.setItem('offsetLS', JSON.stringify(offsetLS));
-            console.log("offset changed to ", offset);
-        };
-        console.log('excercise to perform', actualExercise);
-        requestApi();//obtaining list of offset
+        requestApi();
         return;
     }
-    //1-3 Stage, when reaload page or reset (updating from LS)
-    console.log('1-3 Stage, when reaload page or reset');//delete
-    //obtaining offset value from LS
-    if (localStorage.getItem('offsetLS')) {
-        offsetLS = JSON.parse(localStorage.getItem('offsetLS'));
-        offset = Number(offsetLS.number);
-        console.log('offset', offset);
-        requestApi();//obtaining list of offset
-    }
-    actualExerciseLS = JSON.parse(performedExerciseLS);
-    actualExercise = Number(actualExerciseLS.number);
+    console.log('1-3 Stage, when reaload page');//delete
+    //1-3 Stage, when reaload page (updating from LS)
+    actualExerciseLS = JSON.parse(exercisePerformedLS);
+    actualExercise = actualExerciseLS.number;
     console.log('excercise to perform', actualExercise);
     listExercises = JSON.parse(localStorage.getItem('listExercisesLS'));
+    console.log('listExercises', listExercises);
+    if (localStorage.getItem('offsetLS')) {
+        offsetLS = JSON.parse(localStorage.getItem('offsetLS'));
+        offset = offsetLS.number;
+        console.log('offset', offset);
+    }
 }
 
 requestExercises();// when the page id load
@@ -260,12 +230,12 @@ function requestApi() {
 };
 
 function showExcercise() {
-    //debugger
-    nameExercise.innerText = listExercises[actualExercise].name;
+    nameExercise.innerText = listExercises[actualExercise].name + ' ' + actualExercise;//borrar ultima parte
     difficultyExercise.innerText = listExercises[actualExercise].difficulty;
     descriptionExercise.innerText = listExercises[actualExercise].instructions;
     //updating parameters js and LS
     actualExerciseLS.number = actualExercise;
-    console.log('performing excercise', actualExercise);//delete
+    console.log('excercise actual parameter', actualExercise);//delete
     localStorage.setItem('actualExerciseLS', JSON.stringify(actualExerciseLS));
+    console.log('excercise number in LS', localStorage.getItem('actualExerciseLS'));//delete
 }

@@ -5,6 +5,12 @@
     font-family: sans-serif;
 }
 
+body {
+    height: 95vh;
+    background-color: rgb(71, 204, 142);
+    /* background-color:  rgb(67, 213, 218); */
+}
+
 .mt-14{
     margin-top: 14px;
 }
@@ -13,21 +19,21 @@
     margin-top: 28px;
 }
 
-.title{
-    text-align: center;
-    margin-top: 20px;
-}
-
-body{
-    height: 100vh;
-    background-color: rgb(188, 223, 243);
-}
-
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px 5vw;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.divInfo span{
+    font-size: 22px;
+    font-weight: 530;
 }
 
 .divContainer{
@@ -40,24 +46,18 @@ main{
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 80px;
+    font-weight: 600
 }
 
-.divBtns{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.divTime1{
+.divTime{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75px;
 }
 
-.divTime2{
+/* .divTime2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,13 +65,52 @@ main{
     font-weight: 500;
     font-size: 40px;
     color: rgb(105, 104, 104);
+} */
+
+.divBtns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn{
     height: 36px;
     width: 100px;
     border-radius: 10px;
-    border: 1px solid rgb(97, 97, 97);
-    font-size: 18px;
+    /* border: 1px solid rgb(97, 97, 97); */
+    font-size: 20px;
     font-weight: 600;
 }
+
+#startBtn{
+    background-color: rgb(104, 255, 74);
+    border: none;
+}
+
+#pauseBtn{
+    background-color: rgb(104, 255, 74);
+    border: none;
+}
+
+#resetBtn, #resetBtn2{
+    background-color: rgb(255, 71, 71);
+    border: none;
+}
+
+#endExerciseBtn{
+    width: 150px;
+    border: none;
+}
+
+.divExercises{
+    text-align: left;
+    font-size: 22px;
+}
+
+/* .divExercisesDecription{
+    display: flex;
+    flex-direction: row;
+} */
+
+
+/* https://coolors.co/palette/33658a-86bbd8-2f4858-f6ae2d-f26419 */

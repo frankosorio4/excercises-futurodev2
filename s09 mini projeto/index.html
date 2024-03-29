@@ -8,30 +8,47 @@
     <title>Pomodoro</title>
 </head>
 <body>
-    <h1 class="title">Pomodoro</h1>
     <main>
-        <div class="divInfo mt-28">
-            <span>Inicie o timer para começar a rutina Pomodoro. Esta rutina vai te ajudar com tua produtividade e tua saúde. Os periodos de trabalho vão ser de uns 25 min. Após de esse tempo, vai aparecer um exército de elongação que você pode fazer por 5 min. Depois de isso, pode retomar a atividade. Pode Pausar o timer quando quiser.</span>
+        <div id='divInfo' class="divInfo mt-14">
+            <h1 class="title">Pomodoro</h1>
+            <span>Start the timer to begin the Pomodoro routine. This is a routine with work (or study) periods of 25 min. Finished that time, it will show you an exercise where you can refresh your brain and stretch your body for 5 min. This routine can help you with your productivity and health.</span>
         </div>
         
         <div class="divContainer mt-14">
-            <h1 class="title">Timer</h1>
+            <h1 id='titleTimer' class="title">Work Time</h1>
             <div class="divTimer mt-14">
-                <div id="divMinutos" class="divTime1">25</div>
+                <div id="divMinutes" class="divTime">01</div>
                 <div class="separator">:</div>
-                <div id="divSegundos" class="divTime1">00</div>
-                <div class="separator">:</div>
-                <div id="divMs" class="divTime2">000</div>
+                <div id="divSeconds" class="divTime">00</div>
+                <!-- <div class="separator">:</div>
+                <div id="divMs" class="divTime2">000</div> -->
             </div>
             <div class="divBtns mt-14">
-                <button id='iniciarBtn' class="btn" onclick="startTimer()">Iniciar</button>
-                <button id='pausarBtn' class="btn" onclick="pauseTimer()">Pausar</button>
-                <button id='resetearBtn' class="btn" onclick="resetTimer()">Resetar</button>
-                
+                <button id='startBtn' class="btn" onclick="startTimer()">Start</button>
+                <button id='pauseBtn' class="btn" onclick="pauseTimer()" style="display: none;">Pause</button>
+                <button id='resetBtn' class="btn" onclick="resetTimer()">Reset</button>
+                <button id='resetBtn2' class="btn" style="display: none;" onclick="resetTimer2()">Reset</button>
+                <button id='endExerciseBtn' class="btn" style="display: none;" onclick="endEcercise()">End Exercise</button>
             </div>
         </div>
-        
-        
+
+        <div id="divExercises" class="divExercises" style="display:none">
+            <div class="divExercisesDecription mt-14">
+                <span><b>Execise name: </b>
+                    <span id="nameExercise" class="nameExercise"></span>
+                </span>
+            </div>
+            <div class="divExercisesDecription mt-14">
+                <span><b>Difficulty:</b> 
+                    <span id="difficultyExercise" class="difficultyExercise"></span>
+                </span>
+            </div>
+            <div class="divExercisesDecription mt-14">
+                <span><b>Instructions: </b>
+                    <span id="descriptionExercise" class="descriptionExercise mt-14"></p>
+                </span>
+            </div>
+        </div>
     </main>
 </body>
 </html>
