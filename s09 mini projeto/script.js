@@ -12,6 +12,7 @@ let startBtn = document.getElementById('startBtn');
 let pauseBtn = document.getElementById('pauseBtn');
 let endExerciseBtn = document.getElementById('endExerciseBtn');
 let resetBtn = document.getElementById('resetBtn');
+let resetBtn2 = document.getElementById('resetBtn2');
 
 //SETTING the interval duration
 let secondsSet = 10;//defaul 60. Range 1-60 sec work-time
@@ -52,13 +53,16 @@ function updateTimer() {
             pauseBtn.style.display = 'none';
             startBtn.style.display = 'none';
             resetBtn.style.display = 'none';
+            resetBtn2.style.display = 'none';
             endExerciseBtn.style.display = 'block';
         }
         if (secondsCounter == -1 && minutesCounter == 0) {
-            //validation (switch schedule)
+            //validation (switching schedule)
             if (currentSession === 'work-time') {
                 currentSession = 'exercise-time';
                 divExercises.style.display = 'block';
+                resetBtn.style.display = 'none';
+                resetBtn2.style.display = 'block';
                 //endExerciseBtn.style.display = 'block';
                 showExcercise();
                 secondsCounter = secondsSet + 1;//delay
@@ -71,6 +75,7 @@ function updateTimer() {
                 currentSession = 'work-time';
                 divExercises.style.display = 'none';
                 endExerciseBtn.style.display = 'none';
+                resetBtn2.style.display = 'none';
                 secondsCounter = secondsSet + 1;//delay
                 minutesCounter = minutesSet;
                 body.style.backgroundColor = 'rgb(71, 204, 142)';
@@ -94,7 +99,7 @@ function updateTimer() {
 
 function resetTimer() {
     clearInterval(interval);
-    //set default (html elements)
+    //updating html elements
     divInfo.style.display = 'block';
     startBtn.style.display = 'block';
     resetBtn.style.display = 'block';
@@ -105,13 +110,29 @@ function resetTimer() {
     titleTimer.innerHTML = 'Work Time';
     divMinutes.innerHTML = `${formatTime(minutesSet)}`;
     divSeconds.innerHTML = '00';
-    //set default (script parameters)
+    //updating parameters js
     startInterval = true;// to able startTimer()
     msCounter = 1000;
     secondsCounter = secondsSet;
     minutesCounter = minutesSet;
     currentSession = 'work-time';
 }
+
+function resetTimer2() {
+    clearInterval(interval);
+    //updating html elements
+    currentSession = 'exercise-time';
+    divExercises.style.display = 'block';
+    showExcercise();
+    secondsCounter = secondsSet + 1;//delay
+    minutesCounter = minutesSet2;
+    body.style.backgroundColor = 'rgb(67, 213, 218)';
+    titleTimer.innerHTML = 'Exercise Time';
+    divMinutes.innerHTML = `${formatTime(minutesSet2)}`;
+    divSeconds.innerHTML = '00';
+    pauseTimer()
+}
+
 
 function pauseTimer() {
     if (!startInterval) {
@@ -143,7 +164,7 @@ function endEcercise() {
         return;
     }
     actualExercise++;
-    actualExerciseLS.number =actualExercise;
+    actualExerciseLS.number = actualExercise;
     localStorage.setItem('actualExerciseLS', JSON.stringify(actualExerciseLS));
     resetTimer();
 }
@@ -179,8 +200,8 @@ function requestExercises() {
     //1-1 stage, 1st run. anything in LS
     if (!exercisePerformedLS) {
         console.log('1-1 request, 1st run. anything in LS');//delete
-        if (offset === 150){//need improve
-            offset =0;
+        if (offset === 150) {//need improve
+            offset = 0;
         };
         requestApi();
         return;
@@ -200,16 +221,16 @@ function requestExercises() {
     }
     console.log('1-3 Stage, when reaload page');//delete
     //1-3 Stage, when reaload page (updating from LS)
-    actualExerciseLS = JSON.parse(exercisePerformedLS);
-    actualExercise = actualExerciseLS.number;
-    console.log('excercise to perform', actualExercise);
-    listExercises = JSON.parse(localStorage.getItem('listExercisesLS'));
-    console.log('listExercises', listExercises);
     if (localStorage.getItem('offsetLS')) {
         offsetLS = JSON.parse(localStorage.getItem('offsetLS'));
         offset = offsetLS.number;
         console.log('offset', offset);
     }
+    actualExerciseLS = JSON.parse(exercisePerformedLS);
+    actualExercise = actualExerciseLS.number;
+    console.log('excercise to perform', actualExercise);
+    listExercises = JSON.parse(localStorage.getItem('listExercisesLS'));
+    console.log('listExercises', listExercises);
 }
 
 requestExercises();// when the page id load
@@ -230,12 +251,11 @@ function requestApi() {
 };
 
 function showExcercise() {
-    nameExercise.innerText = listExercises[actualExercise].name + ' ' + actualExercise;//borrar ultima parte
+    nameExercise.innerText = listExercises[actualExercise].name;
     difficultyExercise.innerText = listExercises[actualExercise].difficulty;
     descriptionExercise.innerText = listExercises[actualExercise].instructions;
     //updating parameters js and LS
     actualExerciseLS.number = actualExercise;
-    console.log('excercise actual parameter', actualExercise);//delete
+    console.log('excercise performing', actualExercise);//delete
     localStorage.setItem('actualExerciseLS', JSON.stringify(actualExerciseLS));
-    console.log('excercise number in LS', localStorage.getItem('actualExerciseLS'));//delete
 }

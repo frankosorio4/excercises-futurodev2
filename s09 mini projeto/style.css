@@ -92,7 +92,7 @@ main{
     border: none;
 }
 
-#resetBtn{
+#resetBtn, #resetBtn2{
     background-color: rgb(255, 71, 71);
     border: none;
 }
