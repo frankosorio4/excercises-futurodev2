@@ -8,6 +8,7 @@ let offset = 0;
 
 let changeBtn = document.getElementById('changeBtn');
 
+//need to create a btn
 changeBtn.addEventListener('click', () => {
     exibirExercise();
     console.log(exerciseActual); 

@@ -5,6 +5,12 @@
     font-family: sans-serif;
 }
 
+body {
+    height: 95vh;
+    background-color: rgb(71, 204, 142);
+    /* background-color:  rgb(67, 213, 218); */
+}
+
 .mt-14{
     margin-top: 14px;
 }
@@ -13,21 +19,21 @@
     margin-top: 28px;
 }
 
-.title{
-    text-align: center;
-    margin-top: 20px;
-}
-
-body{
-    height: 100vh;
-    background-color: rgb(246, 174, 45);
-}
-
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px 5vw;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.divInfo span{
+    font-size: 22px;
+    font-weight: 530;
 }
 
 .divContainer{
@@ -41,7 +47,7 @@ main{
     align-items: center;
     gap: 5px;
     font-size: 70px;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .divTime{
@@ -77,23 +83,34 @@ main{
 }
 
 #startBtn{
-    background-color: rgb(47, 72, 88);
+    background-color: rgb(104, 255, 74);
     border: none;
 }
 
 #pauseBtn{
-    background-color: rgb(51, 101, 138);
+    background-color: rgb(104, 255, 74);
     border: none;
 }
 
 #resetBtn{
-    background-color: rgb(242, 100, 25);
+    background-color: rgb(255, 71, 71);
+    border: none;
+}
+
+#endExerciseBtn{
+    width: 150px;
     border: none;
 }
 
 .divExercises{
     text-align: left;
+    font-size: 22px;
 }
+
+/* .divExercisesDecription{
+    display: flex;
+    flex-direction: row;
+} */
 
 
 /* https://coolors.co/palette/33658a-86bbd8-2f4858-f6ae2d-f26419 */
