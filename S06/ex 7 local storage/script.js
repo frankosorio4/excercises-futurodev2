@@ -110,7 +110,7 @@ function addCarrinho() {
         let data = [];
         // si la variable no existe = null
         if (produtosSalvosTempString) {
-            //to pase str -> JSON y guardar data previa
+            //to parse of str to JsObj and save in data 
             data = JSON.parse(produtosSalvosTempString);
         }
         //adjuntando nueva data
