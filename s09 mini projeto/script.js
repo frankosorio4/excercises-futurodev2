@@ -251,7 +251,7 @@ requestExercises();// when the page id load
 function requestApi() {
     fetch('https://api.api-ninjas.com/v1/exercises?type=stretching' + `&offset=${offset}`, {
         method: 'GET',
-        headers: { 'X-Api-Key': 'j1AKczm+K6sdLu/F1QUhEw==XyymCozQErXeuzGs' },
+        headers: { 'X-Api-Key': 'PUT THE KEY HERE' },
         contentType: 'application/json',
     })
         .then((response) => response.json())
